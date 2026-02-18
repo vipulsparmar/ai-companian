@@ -42,10 +42,10 @@ function createWindow() {
   // Make window invisible to screen capture (Disabled for debugging visibility)
   // mainWindow.setContentProtection(true);
 
-  // Choose URL based on environment
-  const isDev = process.env.NODE_ENV === 'development';
+  // Choose URL based on whether the app is packaged
+  const isDev = !app.isPackaged;
   // Replace 'https://your-production-url.com' with your actual server URL after deployment
-  const prodUrl = 'https://your-production-url.com';
+  const prodUrl = 'https://my-backend-git-main-vipulsingh44519-8339s-projects.vercel.app';
   const targetUrl = isDev ? 'http://localhost:3000' : prodUrl;
 
   // Load the target URL
