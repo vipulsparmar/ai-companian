@@ -240,7 +240,7 @@ body {
   }
 }
 
-.group-active:animate-ripple-mic::after {
+.group-active .animate-ripple-mic::after {
   content: '';
   position: absolute;
   inset: 0;
