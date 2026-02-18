@@ -45,7 +45,7 @@ function createWindow() {
   // Choose URL based on whether the app is packaged
   const isDev = !app.isPackaged;
   // Replace 'https://your-production-url.com' with your actual server URL after deployment
-  const prodUrl = 'https://my-backend-git-main-vipulsingh44519-8339s-projects.vercel.app';
+  const prodUrl = 'https://your-new-deployment-url.com';
   const targetUrl = isDev ? 'http://localhost:3000' : prodUrl;
 
   // Load the target URL
