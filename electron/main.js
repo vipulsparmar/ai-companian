@@ -20,14 +20,14 @@ function createWindow() {
   // Create the browser window
   mainWindow = new BrowserWindow({
     width: winWidth,
-    height: 800, // Changed from 5000 to 800
+    height: winHeight,
     x,
     y,
-    transparent: false, // Changed from true to false to ensure visibility
-    frame: true, // Show frame for now to find the window
-    titleBarStyle: 'default', // standard title bar
+    transparent: true,
+    frame: false,
+    titleBarStyle: 'hidden',
     alwaysOnTop: true,
-    skipTaskbar: false, // Show in taskbar to help find it
+    skipTaskbar: true, // Hide from taskbar and Alt+Tab
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
@@ -36,16 +36,16 @@ function createWindow() {
       preload: path.join(__dirname, 'preload.js'),
       sandbox: false
     },
-    show: true // Show immediately
+    show: false
   });
 
-  // Make window invisible to screen capture (Disabled for debugging visibility)
-  // mainWindow.setContentProtection(true);
+  // Make window invisible to screen capture
+  mainWindow.setContentProtection(true);
 
   // Choose URL based on whether the app is packaged
   const isDev = !app.isPackaged;
   // Replace 'https://your-production-url.com' with your actual server URL after deployment
-  const prodUrl = 'https://your-new-deployment-url.com';
+  const prodUrl = 'https://ai-companian.vercel.app';
   const targetUrl = isDev ? 'http://localhost:3000' : prodUrl;
 
   // Load the target URL
