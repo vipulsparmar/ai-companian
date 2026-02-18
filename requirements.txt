@@ -1,0 +1,29 @@
+# Python Requirements for OpenAI Realtime Agents
+# Note: This is primarily a Node.js project, but these Python packages may be useful for development/deployment
+
+# Core dependencies
+python-dotenv==1.0.0
+requests==2.31.0
+openai==1.3.0
+
+# Development tools
+pytest==7.4.3
+black==23.11.0
+flake8==6.1.0
+mypy==1.7.1
+
+# Web framework (if needed for API endpoints)
+fastapi==0.104.1
+uvicorn==0.24.0
+
+# Data processing
+pandas==2.1.3
+numpy==1.25.2
+
+# Audio processing (if needed)
+pydub==0.25.1
+librosa==0.10.1
+
+# Environment and deployment
+gunicorn==21.2.0
+python-multipart==0.0.6 
